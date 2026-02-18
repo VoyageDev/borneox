@@ -1,11 +1,169 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FloatButton from "../components/FloatButton.astro";
+import ImageModal from "../components/ImageModal.astro";
+import BottomNavigation from "../components/BottomNavigation.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import RouteItem from "../components/RouteItem.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Borneox - Travel Samarinda Kalimantan">
+  <Header />
+
+  <!-- poster section -->
+  <section class="hero" id="home">
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="/asset/mobile/poster_mobile.png"
+        class="poster-mobile"
+      />
+      <img src="/asset/poster.png" alt="Borneox Travel" class="hero-image" />
+    </picture>
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>Perjalanan Nyaman, Lintas Kalimantan Tanpa Hambatan.</h1>
+        <p>Layanan Travel Profesional & Terpercaya</p>
+        <a href="https://wa.me/6282195768386" class="btn-pesan"
+          >PESAN SEKARANG</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <div class="container">
+      <h2>Travel Terpercaya Antar Kota di Kalimantan</h2>
+      <p>
+        Borneox Travel adalah layanan transportasi antar kota terpercaya yang
+        melayani rute-rute utama di Kalimantan seperti Banjarmasin, Samarinda,
+        Balikpapan, Pontianak, dan Palangkaraya. Dengan armada yang terawat dan
+        driver berpengalaman, kami siap mengantarkan Anda dengan nyaman dan aman
+        ke tujuan.
+      </p>
+      <p>
+        Nikmati perjalanan lintas kota dengan harga terjangkau, armada bersih,
+        dan pelayanan 24/7. Pesan sekarang untuk mendapatkan harga terbaik!
+      </p>
+    </div>
+  </section>
+
+  <!-- choose car section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Pilihan Armada</h2>
+      <div class="mobil-container">
+        <div class="mobil-card">
+          <img
+            src="asset/daihatsu_hitam.png"
+            alt="Pilihan Mobil Daihatsu Sigra Hitam"
+          />
+          <h3>Sigra Standard</h3>
+          <p>Aman & Nyaman</p>
+          <button class="btn-pilih">Pesan</button>
+        </div>
+        <div class="mobil-card">
+          <img
+            src="asset/daihatsu_coklat.png"
+            alt="Pilihan Mobil Daihatsu Sigra Coklat"
+          />
+          <h3>Sigra Executive</h3>
+          <p>Peningkatan & Fasilitas</p>
+          <button class="btn-pilih">Pesan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- rute section -->
+  <section class="section bg-light" id="rute">
+    <div class="container">
+      <h2 class="section-title">Rute Perjalanan</h2>
+      <p class="subtitle">
+        Melayani Rute Antar Kota & Provinsi setiap hari. Lorem ipsum, dolor sit
+        amet consectetur adipisicing elit. Earum blanditiis veritatis iste, nemo
+        laudantium iure odio animi assumenda natus officiis molestiae suscipit
+        harum magni ipsam rem saepe quibusdam commodi! Aut!
+      </p>
+      <div class="rute-list">
+        <section class="rute-region">
+          <h2>Rute Kalimantan Timur</h2>
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Balikpapan"
+            tujuan2="Tenggarong"
+            tujuan3="Bontang"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Sangatta"
+            tujuan2="Berau"
+            tujuan3="Tanah Grogot"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Penajam/IKN"
+            tujuan2="Sendawar"
+            tujuan3="Ujoh Bilang"
+          />
+        </section>
+
+        <section class="rute-region">
+          <h2>Rute Kalimantan Barat</h2>
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Pontianak"
+            tujuan2="Sambas"
+            tujuan3="Bengkayang"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Landak"
+            tujuan2="Mempawah"
+            tujuan3="Sanggau"
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- gallery section-->
+  <!-- galeri section -->
+  <section class="section" id="gallery">
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="asset/mobile/galeri_poster_mobile.png"
+      />
+      <img
+        src="asset/galeri_poster.png"
+        alt="Galeri Borneox Travel Samarinda Kalimantan"
+        class="banner-image"
+      />
+    </picture>
+    <div class="container">
+      <h2 class="section-title">Galeri Borneox</h2>
+      <p class="subtitle">Dokumentasi Perjalanan Driver & Penumpang Kami.</p>
+      <div class="galeri-grid">
+        <div class="galeri-item">
+          <img
+            src="#"
+            alt="perjalanan samarinda balikpapan"
+            loading="lazy"
+            class="img-galeri"
+          />
+        </div>
+        <div class="galeri-item"></div>
+        <div class="galeri-item"></div>
+        <div class="galeri-item"></div>
+      </div>
+    </div>
+  </section>
 </Layout>
+<Footer />
+
+<BottomNavigation />
+<FloatButton />
+<ImageModal />

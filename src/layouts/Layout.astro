@@ -1,23 +1,91 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// Import CSS Global Anda
+import "../assets/styles/global.css";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+
+    <div id="imageModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="imgFull" />
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      // toggle image preview logic
+      document.addEventListener("click", function (e) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById(
+          "imgFull",
+        ) as HTMLImageElement | null;
+        const captionText = document.getElementById("caption");
+
+        const target = e.target as HTMLElement | null;
+        if (target && target.tagName === "IMG") {
+          const imgTarget = target as HTMLImageElement;
+          if (
+            imgTarget.closest(".logo") ||
+            imgTarget.closest(".whatsapp-float") ||
+            imgTarget.classList.contains("no-preview")
+          )
+            return;
+          e.preventDefault();
+          if (modal && modalImg && captionText) {
+            modal.style.display = "flex";
+            modal.style.flexDirection = "column";
+            modalImg.src = imgTarget.src;
+            captionText.innerHTML = imgTarget.alt || "Preview Gambar";
+          }
+        }
+      });
+
+      const closeModal = document.querySelector(
+        ".close-modal",
+      ) as HTMLElement | null;
+      if (closeModal) {
+        closeModal.onclick = function () {
+          const modal = document.getElementById("imageModal");
+          if (modal) {
+            modal.style.display = "none";
+          }
+        };
+      }
+
+      // Animasi Button Pesan Sekarang floater animation logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const notifBtn = document.getElementById("notifButton");
+        if (!notifBtn) return;
+        setTimeout(() => {
+          notifBtn.classList.add("show-ball");
+          setTimeout(startLeftRollAnimation, 1500);
+        }, 3000);
+
+        function startLeftRollAnimation() {
+          if (!notifBtn) return;
+          notifBtn.classList.add("expand");
+          setTimeout(() => {
+            if (!notifBtn) return;
+            notifBtn.classList.remove("expand");
+            setTimeout(startLeftRollAnimation, 3600);
+          }, 6000);
+        }
+      });
+    </script>
+  </body>
+</html>

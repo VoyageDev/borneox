@@ -1,0 +1,23 @@
+---
+// Menerima data dari halaman utama
+const { asal, tujuan1, tujuan2, tujuan3 } = Astro.props;
+---
+
+<div class="rute-item">
+  <div class="rute-text">
+    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
+      >{tujuan1}</span
+    >
+  </div>
+  <div class="rute-text">
+    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
+      >{tujuan2}</span
+    >
+  </div>
+  <div class="rute-text">
+    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
+      >{tujuan3}</span
+    >
+  </div>
+  <button class="btn-pesan-rute">Pesan</button>
+</div>
