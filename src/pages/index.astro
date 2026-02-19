@@ -20,7 +20,11 @@ import RouteItem from "../components/RouteItem.astro";
         srcset="/asset/mobile/poster_mobile.png"
         class="poster-mobile"
       />
-      <img src="/asset/poster.png" alt="Borneox Travel" class="hero-image" />
+      <img
+        src="/asset/poster.png"
+        alt="Borneox Layanan Travel Samarinda Kalimantan"
+        class="hero-image"
+      />
     </picture>
     <div class="hero-overlay">
       <div class="container">
@@ -58,7 +62,7 @@ import RouteItem from "../components/RouteItem.astro";
         <div class="mobil-card">
           <img
             src="asset/daihatsu_hitam.png"
-            alt="Pilihan Mobil Daihatsu Sigra Hitam"
+            alt="Pilihan Armada Mobil Daihatsu Sigra Hitam"
           />
           <h3>Sigra Standard</h3>
           <p>Aman & Nyaman</p>
@@ -67,7 +71,7 @@ import RouteItem from "../components/RouteItem.astro";
         <div class="mobil-card">
           <img
             src="asset/daihatsu_coklat.png"
-            alt="Pilihan Mobil Daihatsu Sigra Coklat"
+            alt="Pilihan Armada Mobil Daihatsu Sigra Coklat"
           />
           <h3>Sigra Executive</h3>
           <p>Peningkatan & Fasilitas</p>
@@ -79,6 +83,18 @@ import RouteItem from "../components/RouteItem.astro";
 
   <!-- rute section -->
   <section class="section bg-light" id="rute">
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="asset/mobile/rute_poster_mobile.png"
+        class="rute-mobile"
+      />
+      <img
+        src="asset/rute_poster.png"
+        alt="Rute Perjalanan Borneox Travel Samarinda Kalimantan"
+        class="banner-image"
+      />
+    </picture>
     <div class="container">
       <h2 class="section-title">Rute Perjalanan</h2>
       <p class="subtitle">
@@ -100,13 +116,19 @@ import RouteItem from "../components/RouteItem.astro";
             asal="Samarinda"
             tujuan1="Sangatta"
             tujuan2="Berau"
+            tujuan3="Melak"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Penajam Paser Utara"
+            tujuan2="Nusantara"
             tujuan3="Tanah Grogot"
           />
           <RouteItem
             asal="Samarinda"
-            tujuan1="Penajam/IKN"
-            tujuan2="Sendawar"
-            tujuan3="Ujoh Bilang"
+            tujuan1="Tabang"
+            tujuan2="Muarawahau"
+            tujuan3="Tandjungredeb"
           />
         </section>
 
@@ -124,13 +146,64 @@ import RouteItem from "../components/RouteItem.astro";
             tujuan2="Mempawah"
             tujuan3="Sanggau"
           />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Ketapang"
+            tujuan2="Sintang"
+            tujuan3="Kapuas Hulu"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Sekadau"
+            tujuan2="Melawi"
+            tujuan3="Kayong Utara"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Kubu Raya"
+            tujuan2="Singkawang"
+            tujuan3="Karangan"
+          />
+        </section>
+
+        <section class="rute-region">
+          <h2>Rute Kalimantan Tengah</h2>
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Kotawaringin Barat"
+            tujuan2="Kotawaringin Timur"
+            tujuan3="Kapuas"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Barito Selatan"
+            tujuan2="Barito Utara"
+            tujuan3="Sukamara"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Lamandau"
+            tujuan2="Seruyan"
+            tujuan3="Katingan"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Pulang Pisau"
+            tujuan2="Gunung Mas"
+            tujuan3="Barito Timur"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Murung Raya"
+            tujuan2="Palangka Raya"
+            tujuan3="Bukit Sawit"
+          />
         </section>
       </div>
     </div>
   </section>
 
   <!-- gallery section-->
-  <!-- galeri section -->
   <section class="section" id="gallery">
     <picture>
       <source
@@ -139,7 +212,7 @@ import RouteItem from "../components/RouteItem.astro";
       />
       <img
         src="asset/galeri_poster.png"
-        alt="Galeri Borneox Travel Samarinda Kalimantan"
+        alt="Galeri Perjalanan Borneox Travel Samarinda Kalimantan"
         class="banner-image"
       />
     </picture>
@@ -161,9 +234,8 @@ import RouteItem from "../components/RouteItem.astro";
       </div>
     </div>
   </section>
+  <Footer />
+  <BottomNavigation />
+  <FloatButton />
+  <ImageModal />
 </Layout>
-<Footer />
-
-<BottomNavigation />
-<FloatButton />
-<ImageModal />

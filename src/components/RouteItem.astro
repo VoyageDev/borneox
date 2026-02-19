@@ -21,3 +21,21 @@ const { asal, tujuan1, tujuan2, tujuan3 } = Astro.props;
   </div>
   <button class="btn-pesan-rute">Pesan</button>
 </div>
+
+<style>
+  /* 1. Targetkan class pembungkus paling luar kartu rute Anda */
+  .rute-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Memaksa kartu menyamakan tinggi dengan tetangga sebelahnya di grid */
+  }
+
+  /* 2. Targetkan class pembungkus teks kotanya (opsional tapi disarankan) */
+  .rute-text {
+    flex-grow: 1; /* Akan otomatis merenggang mengisi ruang jika ada baris yang kosong */
+  }
+  /* 3. Targetkan class tombol Pesan Anda */
+  .btn-pesan-rute {
+    margin-top: auto;
+  }
+</style>

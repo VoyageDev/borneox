@@ -89,7 +89,7 @@ body {
   margin-left: 15px;
   font-size: 14px;
 }
-.btn-pesan-header {
+#home .btn-pesan-header {
   display: flex; /* Munculkan di mobile */
   align-items: center;
   gap: 8px;
@@ -172,6 +172,10 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+section {
+  scroll-margin-top: 80px;
+}
+
 .section-title {
   color: var(--coklat-dark);
   margin-bottom: 10px;

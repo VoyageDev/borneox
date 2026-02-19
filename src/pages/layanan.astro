@@ -1,0 +1,230 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FloatButton from "../components/FloatButton.astro";
+import ImageModal from "../components/ImageModal.astro";
+import BottomNavigation from "../components/BottomNavigation.astro";
+---
+
+<Layout title="Borneox - Travel Samarinda Kalimantan">
+  <Header />
+  <!-- poster section -->
+  <section class="rental-wrapper" id="layanan">
+    <picture>
+      <img
+        src="/asset/rental_poster.png"
+        alt="Borneox Travel Rental Samarinda"
+        class="rental-img"
+      />
+    </picture>
+  </section>
+  <div class="description">
+    <h1>
+      Jasa Rental Mobil Area Samarinda - Carter Mobil Murah & Terpecaya 👍
+    </h1>
+    <p>
+      Solusi sewa mobil harian, bulanan, hingga tahunan dengan kondisi armada
+      prima. Kami menyediakan layanan lepas kunci maupun dengan driver
+      profesional untuk kebutuhan perjalanan bisnis atau wisata bersama keluarga
+      Anda.
+    </p>
+  </div>
+
+  <!-- services section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Layanan Kami Yang Tersedia</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img
+            src="/asset/rental_services.png"
+            alt="Jasa Rental Mobil Samarinda Harian Bulanan Carter Lepas Kunci"
+          />
+          <div class="services-content">
+            <h3>Rental Mobil Harian / Bulanan</h3>
+            <p>
+              Sewa mobil dengan harga terjangkau untuk kebutuhan harian, atau
+              bulanan. Armada terawat dan Aman Terpecaya.
+            </p>
+            <a
+              href="https://wa.me/6282195768386"
+              target="_blank"
+              class="btn-services"
+              >Pesan Sekarang
+            </a>
+          </div>
+        </div>
+        <div class="service-item">
+          <img
+            src="/asset/road_services.png"
+            alt="Jasa Travel Reguler Carter Kargo Samarinda Dan Kalimantan"
+          />
+          <div class="services-content">
+            <h3>Jasa Travel Carter Reguler & Kargo Barang</h3>
+            <p>
+              Layanan antar jemput travel door to door dengan armada nyaman dan
+              driver profesional. Jasa Titipan barang dengan armada terpercaya
+              untuk kebutuhan logistik Anda di Samarinda atau Kalimantan.
+            </p>
+            <a
+              href="https://wa.me/6282195768386"
+              target="_blank"
+              class="btn-services"
+              >Pesan Sekarang
+            </a>
+          </div>
+        </div>
+        <div class="service-item">
+          <img
+            src="/asset/servis_mobil.png"
+            alt="Layanan Mini Servis Mobil Samarinda"
+          />
+          <div class="services-content">
+            <h3>Jasa Mini Servis Mobil Daerah Samarinda</h3>
+            <p>
+              Layanan Mini Servis Mobil dengan untuk perawatan rutin sehari
+              hari. Kami menyediakan jasa servis ringan seperti ganti oli,
+              pengecekan rem, dan perawatan berkala lainnya untuk menjaga
+              performa mobil Anda tetap optimal.
+            </p>
+            <a
+              href="https://wa.me/6282195768386"
+              target="_blank"
+              class="btn-services"
+              >Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BottomNavigation />
+  <FloatButton />
+  <ImageModal />
+</Layout>
+
+<style>
+  /* --- HERO RENTAL BEBAS BENTROK --- */
+  .rental-wrapper {
+    width: 100%;
+    display: flex; /* Pakai flex agar gambar rapi di tengah */
+    align-items: center;
+    background-color: #000000;
+    margin: 0;
+    padding: 0; /* Hapus padding bawaan jika ada */
+  }
+
+  .rental-wrapper picture {
+    width: 100%;
+    display: block;
+  }
+  .rental-img {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  .description {
+    padding: 40px 20px; /* Memberi ruang napas [cite: 38] */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .description h1 {
+    color: var(--coklat-dark); /* Konsisten dengan tema [cite: 66] */
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .description p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 18px;
+  }
+
+  .services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .services .service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+    align-items: stretch;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .service-list .service-item:nth-child(3) {
+    grid-column: 1 / 3; /* Span 2 kolom */
+    max-width: 50%; /* Lebih sempit dari items 1 & 2 */
+    margin: 0 auto; /* Center */
+  }
+
+  .service-item {
+    display: flex;
+    flex-direction: column; /* Menyusun isi kartu ke bawah */
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px; /* Memberi ruang di dalam kartu */
+    border-radius: 12px; /* Melengkungkan sudut kartu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan sangat halus */
+    border: 1px solid #eee; /* Garis tepi super tipis */
+  }
+
+  /* Mengatur gambar agar rapi di dalam kartu */
+  .service-item img {
+    width: calc(100% + 50px); /* Perlebar gambar melampaui padding kartu */
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin: -25px -25px 20px -25px;
+  }
+  .service-item p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px; /* Jarak antara teks dan tombol */
+  }
+
+  .services .btn-services {
+    background-color: #1a237e; /* Saya ganti ke biru navy tema Anda agar lebih nyambung */
+    border-radius: 8px; /* Lebih kotak sedikit agar modern */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto; /* KUNCI: Selalu mendorong tombol ke posisi mentok paling bawah */
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .services .btn-services:hover {
+    background-color: #1c279f; /* Efek hover biru terang */
+  }
+
+  .services-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  @media (max-width: 760px) {
+    .services .service-list {
+      grid-template-columns: 1fr;
+      padding: 20px 0;
+      max-width: 100%;
+    }
+    .rental-img {
+      height: auto;
+    }
+
+    .service-list .service-item:nth-child(3) {
+      grid-column: auto; /* Kembalikan ke perilaku normal */
+      max-width: 100%; /* KUNCI: Paksa lebar kembali penuh di HP */
+      width: 100%; /* Pastikan memenuhi container */
+    }
+  }
+</style>

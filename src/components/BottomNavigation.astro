@@ -1,17 +1,46 @@
 <!-- bottom nav -->
 <nav class="bottom-nav">
   <div class="container">
-    <a href="#home" class="nav-link active"
-      ><span class="material-icons">home</span><span>Home</span></a
-    >
-    <a href="#rute" class="nav-link">
-      <span class="material-icons">map</span><span>Rute</span></a
-    >
-    <a href="rental.html" class="nav-link"
-      ><span class="material-icons">commute</span><span>Rental</span></a
-    >
-    <a href="#gallery" class="nav-link"
-      ><span class="material-icons">image</span><span>Gallery</span></a
-    >
+    <a href="/#home" class="nav-link active"
+      ><span class="material-icons">home</span><span>Home</span>
+    </a>
+    <a href="/#rute" class="nav-link">
+      <span class="material-icons">map</span><span>Rute</span>
+    </a>
+    <a href="/layanan" class="nav-link"
+      ><span class="material-icons">commute</span><span>Layanan</span>
+    </a>
+    <a href="/#gallery" class="nav-link">
+      <span class="material-icons">image</span><span>Gallery</span>
+    </a>
   </div>
 </nav>
+
+<script>
+  // fungsi untuk menambahkan kelas 'active' pada tautan yang diklik
+  function setActive() {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+
+    links.forEach((link) => {
+      link.classList.remove("active");
+      const href = link.getAttribute("href");
+
+      // Logika untuk halaman Layanan (Path)
+      if (href === currentPath) {
+        link.classList.add("active");
+      }
+      // Logika untuk Section ID (Hash)
+      else if (currentHash && href && href.includes(currentHash)) {
+        link.classList.add("active");
+      }
+      // Default ke Home jika di root tanpa hash
+      else if (currentPath === "/" && !currentHash && href === "/#home") {
+        link.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("load", setActive);
+  window.addEventListener("hashchange", setActive);
+</script>
