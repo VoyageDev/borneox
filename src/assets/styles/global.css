@@ -10,6 +10,13 @@
   --bg-utama: #ffffff;
   --kartu-bg: #f4f4f4;
   --tombol-wa: #25d366;
+  --color-primary: #8b4513;
+  --color-secondary: #d2691e;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --font-main: "Segoe UI", system-ui, sans-serif;
+  --container-max: 1200px;
+  --spacing: 1rem;
 }
 
 body.dark {
@@ -76,7 +83,6 @@ body {
   gap: 8px; /* Jarak antara logo SVG dan tulisan */
 }
 .logo img {
-  background: #d84315;
   border-radius: 30%;
   padding: 3px;
 }
@@ -210,8 +216,8 @@ section {
   flex-direction: row;
 }
 .mobil-card {
-  background-color: var(--kartu-bg);
-  color: var(--teks-utama);
+  background: #ffffff;
+  color: #1a1a1a;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
@@ -219,8 +225,11 @@ section {
 }
 .mobil-card img {
   width: 100%;
+  max-width: 368px;
+  height: auto;
   border-radius: 5px;
   aspect-ratio: auto;
+  aspect-ratio: 1 / 1;
 }
 .mobil-card h3 {
   font-size: 16px;
@@ -228,8 +237,8 @@ section {
 }
 .mobil-card p {
   font-size: 12px;
-  color: #777;
   margin-bottom: 10px;
+  color: #0d47a1;
 }
 .btn-pilih {
   display: block; /* Penting: agar tag <a> mengenali width dan padding */

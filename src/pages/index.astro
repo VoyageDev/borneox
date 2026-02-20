@@ -9,7 +9,11 @@ import BottomNavigation from "../components/BottomNavigation.astro";
 import RouteItem from "../components/RouteItem.astro";
 ---
 
-<Layout title="Borneox - Travel Samarinda Kalimantan">
+<Layout
+  title="Travel Samarinda Balikpapan Reguler Carter Kargo - Borneox Travel"
+  description="Layanan travel reguler, carter mobil, dan kargo rute Samarinda - Balikpapan Kalimatan. Jemput Langsung Antar Tujuan Anda."
+  image="/asset/preview.webp"
+>
   <Header />
 
   <!-- poster section -->
@@ -17,13 +21,17 @@ import RouteItem from "../components/RouteItem.astro";
     <picture>
       <source
         media="(max-width: 768px)"
-        srcset="/asset/mobile/poster_mobile.png"
+        srcset="/asset/mobile/poster_mobile.webp"
         class="poster-mobile"
       />
       <img
-        src="/asset/poster.png"
+        src="/asset/poster.webp"
         alt="Borneox Layanan Travel Samarinda Kalimantan"
         class="hero-image"
+        fetchpriority="high"
+        width="1200"
+        height="600"
+        decoding="async"
       />
     </picture>
     <div class="hero-overlay">
@@ -63,9 +71,11 @@ import RouteItem from "../components/RouteItem.astro";
       <div class="mobil-container">
         <div class="mobil-card">
           <img
-            src="asset/daihatsu_hitam.webp"
+            src="/asset/daihatsu_hitam.webp"
             alt="Pilihan Armada Mobil Daihatsu Sigra Hitam"
-            width="840"
+            width="368"
+            height="368"
+            loading="lazy"
           />
           <h3>Sigra Standard</h3>
           <p>Aman & Nyaman</p>
@@ -77,9 +87,11 @@ import RouteItem from "../components/RouteItem.astro";
         </div>
         <div class="mobil-card">
           <img
-            src="asset/daihatsu_coklat.webp"
+            src="/asset/daihatsu_coklat.webp"
             alt="Pilihan Armada Mobil Daihatsu Sigra Coklat"
-            width="840"
+            width="368"
+            height="368"
+            loading="lazy"
           />
           <h3>Sigra Executive</h3>
           <p>Peningkatan & Fasilitas</p>
@@ -98,15 +110,16 @@ import RouteItem from "../components/RouteItem.astro";
     <picture>
       <source
         media="(max-width: 768px)"
-        srcset="asset/mobile/rute_poster_mobile.png"
+        srcset="/asset/mobile/rute_poster_mobile.webp"
         class="rute-mobile"
       />
       <img
-        src="asset/rute_poster.png"
+        src="/asset/rute_poster.webp"
         alt="Rute Perjalanan Borneox Travel Samarinda Kalimantan"
         class="banner-image"
         width="1440"
         height="300"
+        loading="lazy"
       />
     </picture>
     <div class="container">
@@ -275,14 +288,15 @@ import RouteItem from "../components/RouteItem.astro";
     <picture>
       <source
         media="(max-width: 768px)"
-        srcset="asset/mobile/galeri_poster_mobile.png"
+        srcset="asset/mobile/galeri_poster_mobile.webp"
       />
       <img
-        src="asset/galeri_poster.png"
+        src="asset/galeri_poster.webp"
         alt="Galeri Perjalanan Borneox Travel Samarinda Kalimantan"
         class="banner-image"
-        width="1440"
+        width="1400"
         height="300"
+        loading="lazy"
       />
     </picture>
     <div class="container">

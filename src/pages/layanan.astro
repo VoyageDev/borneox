@@ -7,7 +7,11 @@ import ImageModal from "../components/ImageModal.astro";
 import BottomNavigation from "../components/BottomNavigation.astro";
 ---
 
-<Layout title="Borneox - Travel Samarinda Kalimantan">
+<Layout
+  title="Rental Mobil Samarinda Mini Service Mobil Samarinda - Borneox Travel"
+  description="Jasa rental mobil lepas kunci atau dengan driver di Samarinda, serta layanan mini service mobil panggilan untuk perawatan rutin mobil Anda."
+  image="/asset/preview-rental.webp"
+>
   <Header />
   <!-- poster section -->
   <section class="rental-wrapper" id="layanan">
@@ -16,6 +20,9 @@ import BottomNavigation from "../components/BottomNavigation.astro";
         src="/asset/rental_poster.png"
         alt="Borneox Travel Rental Samarinda"
         class="rental-img"
+        fetchpriority="high"
+        width="1200"
+        height="600"
       />
     </picture>
   </section>
@@ -40,6 +47,9 @@ import BottomNavigation from "../components/BottomNavigation.astro";
           <img
             src="/asset/rental_services.webp"
             alt="Jasa Rental Mobil Samarinda Harian Bulanan Carter Lepas Kunci"
+            width="400"
+            height="220"
+            loading="lazy"
           />
           <div class="services-content">
             <h3>Rental Mobil Harian / Bulanan</h3>
@@ -59,6 +69,9 @@ import BottomNavigation from "../components/BottomNavigation.astro";
           <img
             src="/asset/road_services.webp"
             alt="Jasa Travel Reguler Carter Kargo Samarinda Dan Kalimantan"
+            width="400"
+            height="220"
+            loading="lazy"
           />
           <div class="services-content">
             <h3>Jasa Travel Carter Reguler & Kargo Barang</h3>
@@ -80,6 +93,9 @@ import BottomNavigation from "../components/BottomNavigation.astro";
           <img
             src="/asset/servis_mobil.webp"
             alt="Layanan Mini Servis Mobil Samarinda"
+            width="400"
+            height="220"
+            loading="lazy"
           />
           <div class="services-content">
             <h3>Jasa Mini Servis Mobil Daerah Samarinda</h3>

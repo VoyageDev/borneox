@@ -2,15 +2,43 @@
 // Import CSS Global Anda
 import "../assets/styles/global.css";
 
-const { title } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:site_name" content="Borneox Travel Samarinda" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Borneox Travel Samarinda",
+        "url": "https://borneox.biz.id/"
+      }
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content={new URL(image, Astro.site || "https://borneox.biz.id")}
+    />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Borneox Travel" />
+
+    <!-- Astro akan otomatis bundle dan optimize CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -86,8 +114,6 @@ const { title } = Astro.props;
           }, 6000);
         }
       });
-
-	  
     </script>
   </body>
 </html>
