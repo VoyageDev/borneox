@@ -1,41 +1,57 @@
 ---
 // Menerima data dari halaman utama
-const { asal, tujuan1, tujuan2, tujuan3 } = Astro.props;
+const { asal, tujuan1, tujuan2, tujuan3, wilayah } = Astro.props;
+
+// Membuat pesan otomatis yang dinamis
+const pesanWA = `Halo Borneox Travel, saya mau tanya tarif dan ketersediaan perjalanan untuk rute wilayah ${wilayah || 'Kalimantan'}.`;
+const linkWA = `https://wa.me/6282195768386?text=${encodeURIComponent(pesanWA)}`;
 ---
 
 <div class="rute-item">
   <div class="rute-text">
-    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
-      >{tujuan1}</span
-    >
+    <span>{asal}</span><span class="material-icons">compare_arrows</span><span>{tujuan1}</span>
   </div>
   <div class="rute-text">
-    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
-      >{tujuan2}</span
-    >
+    <span>{asal}</span><span class="material-icons">compare_arrows</span><span>{tujuan2}</span>
   </div>
-  <div class="rute-text">
-    <span>{asal}</span><span class="material-icons">compare_arrows</span><span
-      >{tujuan3}</span
-    >
-  </div>
-  <button class="btn-pesan-rute">Pesan</button>
+  {tujuan3 && (
+    <div class="rute-text">
+      <span>{asal}</span><span class="material-icons">compare_arrows</span><span>{tujuan3}</span>
+    </div>
+  )}
+  
+  <a href={linkWA} target="_blank" class="btn-pesan-rute">Pesan</a>
 </div>
 
 <style>
-  /* 1. Targetkan class pembungkus paling luar kartu rute Anda */
   .rute-item {
     display: flex;
     flex-direction: column;
-    height: 100%; /* Memaksa kartu menyamakan tinggi dengan tetangga sebelahnya di grid */
+    height: 100%;
+    /* Gunakan padding dan background sesuai style.txt Anda */
+    background: #f0f4f8; [cite: 39]
+    padding: 20px; [cite: 39]
+    border-radius: 8px; [cite: 39]
   }
 
-  /* 2. Targetkan class pembungkus teks kotanya (opsional tapi disarankan) */
   .rute-text {
-    flex-grow: 1; /* Akan otomatis merenggang mengisi ruang jika ada baris yang kosong */
+    /* Gunakan grid agar ikon panah sejajar sempurna di tengah */
+    display: grid; [cite: 46]
+    grid-template-columns: 1fr auto 1fr; [cite: 46]
+    align-items: center; [cite: 47]
+    gap: 10px; [cite: 47]
+    margin-bottom: 12px; [cite: 48]
+    font-weight: bold; [cite: 48]
   }
-  /* 3. Targetkan class tombol Pesan Anda */
+
   .btn-pesan-rute {
-    margin-top: auto;
+    margin-top: auto; 
+    width: 100%; 
+    background: var(--tombol-bg); 
+    color: white; [cite: 53]
+    text-align: center;
+    text-decoration: none;
+    padding: 8px; [cite: 53]
+    border-radius: 5px; [cite: 53]
   }
 </style>

@@ -38,7 +38,7 @@ import BottomNavigation from "../components/BottomNavigation.astro";
       <div class="service-list">
         <div class="service-item">
           <img
-            src="/asset/rental_services.png"
+            src="/asset/rental_services.webp"
             alt="Jasa Rental Mobil Samarinda Harian Bulanan Carter Lepas Kunci"
           />
           <div class="services-content">
@@ -48,7 +48,7 @@ import BottomNavigation from "../components/BottomNavigation.astro";
               bulanan. Armada terawat dan Aman Terpecaya.
             </p>
             <a
-              href="https://wa.me/6282195768386"
+              href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20mau%20tanya%20tarif%20dan%20ketersediaan%20untuk%20Rental%20Mobil%20Harian%20%2F%20Bulanan."
               target="_blank"
               class="btn-services"
               >Pesan Sekarang
@@ -57,7 +57,7 @@ import BottomNavigation from "../components/BottomNavigation.astro";
         </div>
         <div class="service-item">
           <img
-            src="/asset/road_services.png"
+            src="/asset/road_services.webp"
             alt="Jasa Travel Reguler Carter Kargo Samarinda Dan Kalimantan"
           />
           <div class="services-content">
@@ -68,7 +68,8 @@ import BottomNavigation from "../components/BottomNavigation.astro";
               untuk kebutuhan logistik Anda di Samarinda atau Kalimantan.
             </p>
             <a
-              href="https://wa.me/6282195768386"
+              href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20butuh%20informasi%20mengenai%20layanan%20Travel%20Reguler%20%2F%20Carter%20%2F%20Kargo%20Barang.%20Kapan%20ada%20jadwal%20keberangkatan%20terdekat%3F"
+              target="_blank"
               target="_blank"
               class="btn-services"
               >Pesan Sekarang
@@ -77,7 +78,7 @@ import BottomNavigation from "../components/BottomNavigation.astro";
         </div>
         <div class="service-item">
           <img
-            src="/asset/servis_mobil.png"
+            src="/asset/servis_mobil.webp"
             alt="Layanan Mini Servis Mobil Samarinda"
           />
           <div class="services-content">
@@ -89,7 +90,7 @@ import BottomNavigation from "../components/BottomNavigation.astro";
               performa mobil Anda tetap optimal.
             </p>
             <a
-              href="https://wa.me/6282195768386"
+              href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20mau%20tanya%20jadwal%20untuk%20Jasa%20Mini%20Servis%20Mobil%20di%20area%20Samarinda.%20Bisa%20dibantu%3F"
               target="_blank"
               class="btn-services"
               >Pesan Sekarang
@@ -106,16 +107,8 @@ import BottomNavigation from "../components/BottomNavigation.astro";
   <ImageModal />
 </Layout>
 
-<style>
+<style define:vars={{ doodleUrl: 'url("/asset/doodle.webp")' }}>
   /* --- HERO RENTAL BEBAS BENTROK --- */
-  .rental-wrapper {
-    width: 100%;
-    display: flex; /* Pakai flex agar gambar rapi di tengah */
-    align-items: center;
-    background-color: #000000;
-    margin: 0;
-    padding: 0; /* Hapus padding bawaan jika ada */
-  }
 
   .rental-wrapper picture {
     width: 100%;
@@ -123,8 +116,9 @@ import BottomNavigation from "../components/BottomNavigation.astro";
   }
   .rental-img {
     width: 100%;
+    height: 600px;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
   }
   .description {
     padding: 40px 20px; /* Memberi ruang napas [cite: 38] */
@@ -225,6 +219,21 @@ import BottomNavigation from "../components/BottomNavigation.astro";
       grid-column: auto; /* Kembalikan ke perilaku normal */
       max-width: 100%; /* KUNCI: Paksa lebar kembali penuh di HP */
       width: 100%; /* Pastikan memenuhi container */
+    }
+  }
+
+  @media (min-width: 760px) {
+    .rental-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      background-image: var(--doodleUrl);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      background-color: #ffffff;
     }
   }
 </style>

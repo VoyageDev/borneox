@@ -131,6 +131,7 @@ body {
 }
 
 .hero-overlay {
+  pointer-events: none;
   position: absolute; /* Sekarang teksnya yang melayang di atas gambar */
   top: 0;
   left: 0;
@@ -231,15 +232,22 @@ section {
   margin-bottom: 10px;
 }
 .btn-pilih {
+  display: block; /* Penting: agar tag <a> mengenali width dan padding */
   width: 100%;
   background: var(--tombol-bg);
   color: white;
-  border: none;
-  padding: 8px;
+  text-decoration: none; /* Menghilangkan garis bawah default link */
+  padding: 10px;
   border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
 }
+
 .btn-pilih:hover {
   background: var(--tombol-hover);
+  transform: translateY(-2px); /* Efek angkat sedikit saat dihover */
 }
 
 /* Rute List */
@@ -734,7 +742,7 @@ img:not(.logo):not(.icon):not(.whatsapp-float img) {
     font-size: 40px;
   }
   .galeri-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

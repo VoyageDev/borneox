@@ -30,8 +30,10 @@ import RouteItem from "../components/RouteItem.astro";
       <div class="container">
         <h1>Perjalanan Nyaman, Lintas Kalimantan Tanpa Hambatan.</h1>
         <p>Layanan Travel Profesional & Terpercaya</p>
-        <a href="https://wa.me/6282195768386" class="btn-pesan"
-          >PESAN SEKARANG</a
+        <a
+          href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20ingin%20tanya%20ketersediaan%20jadwal%20keberangkatan%20untuk%20perjalanan%20dalam%20waktu%20dekat.%20Bisa%20dibantu%3F"
+          class="btn-pesan"
+          target="_blank">PESAN SEKARANG</a
         >
       </div>
     </div>
@@ -54,28 +56,38 @@ import RouteItem from "../components/RouteItem.astro";
     </div>
   </section>
 
-  <!-- choose car section -->
+  <!-- Armada section -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Pilihan Armada</h2>
       <div class="mobil-container">
         <div class="mobil-card">
           <img
-            src="asset/daihatsu_hitam.png"
+            src="asset/daihatsu_hitam.webp"
             alt="Pilihan Armada Mobil Daihatsu Sigra Hitam"
+            width="840"
           />
           <h3>Sigra Standard</h3>
           <p>Aman & Nyaman</p>
-          <button class="btn-pilih">Pesan</button>
+          <a
+            href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20tertarik%20memesan%20layanan%20dengan%20unit%20mobil%20yang%20ada%20di%20website.%20Sigra%20Berwarna%20Hitam."
+            class="btn-pilih"
+            target="_blank">Pesan</a
+          >
         </div>
         <div class="mobil-card">
           <img
-            src="asset/daihatsu_coklat.png"
+            src="asset/daihatsu_coklat.webp"
             alt="Pilihan Armada Mobil Daihatsu Sigra Coklat"
+            width="840"
           />
           <h3>Sigra Executive</h3>
           <p>Peningkatan & Fasilitas</p>
-          <button class="btn-pilih">Pesan</button>
+          <a
+            href="https://wa.me/6282195768386?text=Halo%20Borneox%20Travel%2C%20saya%20tertarik%20memesan%20layanan%20dengan%20unit%20mobil%20yang%20ada%20di%20website.%20Sigra%20Berwarna%20Coklat."
+            class="btn-pilih"
+            target="_blank">Pesan</a
+          >
         </div>
       </div>
     </div>
@@ -93,6 +105,8 @@ import RouteItem from "../components/RouteItem.astro";
         src="asset/rute_poster.png"
         alt="Rute Perjalanan Borneox Travel Samarinda Kalimantan"
         class="banner-image"
+        width="1440"
+        height="300"
       />
     </picture>
     <div class="container">
@@ -111,24 +125,28 @@ import RouteItem from "../components/RouteItem.astro";
             tujuan1="Balikpapan"
             tujuan2="Tenggarong"
             tujuan3="Bontang"
+            wilayah="Kalimantan Timur"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Sangatta"
             tujuan2="Berau"
             tujuan3="Melak"
+            wilayah="Kalimantan Timur"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Penajam Paser Utara"
             tujuan2="Nusantara"
             tujuan3="Tanah Grogot"
+            wilayah="Kalimantan Timur"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Tabang"
             tujuan2="Muarawahau"
             tujuan3="Tandjungredeb"
+            wilayah="Kalimantan Timur"
           />
         </section>
 
@@ -139,30 +157,35 @@ import RouteItem from "../components/RouteItem.astro";
             tujuan1="Pontianak"
             tujuan2="Sambas"
             tujuan3="Bengkayang"
+            wilayah="Kalimantan Barat"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Landak"
             tujuan2="Mempawah"
             tujuan3="Sanggau"
+            wilayah="Kalimantan Barat"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Ketapang"
             tujuan2="Sintang"
             tujuan3="Kapuas Hulu"
+            wilayah="Kalimantan Barat"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Sekadau"
             tujuan2="Melawi"
             tujuan3="Kayong Utara"
+            wilayah="Kalimantan Barat"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Kubu Raya"
             tujuan2="Singkawang"
             tujuan3="Karangan"
+            wilayah="Kalimantan Barat"
           />
         </section>
 
@@ -173,30 +196,74 @@ import RouteItem from "../components/RouteItem.astro";
             tujuan1="Kotawaringin Barat"
             tujuan2="Kotawaringin Timur"
             tujuan3="Kapuas"
+            wilayah="Kalimantan Tengah"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Barito Selatan"
             tujuan2="Barito Utara"
             tujuan3="Sukamara"
+            wilayah="Kalimantan Tengah"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Lamandau"
             tujuan2="Seruyan"
             tujuan3="Katingan"
+            wilayah="Kalimantan Tengah"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Pulang Pisau"
             tujuan2="Gunung Mas"
             tujuan3="Barito Timur"
+            wilayah="Kalimantan Tengah"
           />
           <RouteItem
             asal="Samarinda"
             tujuan1="Murung Raya"
             tujuan2="Palangka Raya"
             tujuan3="Bukit Sawit"
+            wilayah="Kalimantan Tengah"
+          />
+        </section>
+
+        <section class="rute-region">
+          <h2>Rute Kalimantan Selatan</h2>
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Tanah Laut"
+            tujuan2="Baru"
+            tujuan3="Banjar"
+            wilayah="Kalimantan Selatan"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Barito Kuala"
+            tujuan2="Tapin"
+            tujuan3="Hulu Sungai Selatan"
+            wilayah="Kalimantan Selatan"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Amuntai"
+            tujuan2="Kandangan"
+            tujuan3="Tabalong"
+            wilayah="Kalimantan Selatan"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Tanah Bumbu"
+            tujuan2="Balangan"
+            tujuan3="Banjarmasin"
+            wilayah="Kalimantan Selatan"
+          />
+          <RouteItem
+            asal="Samarinda"
+            tujuan1="Banjar Baru"
+            tujuan2="Sebamban"
+            tujuan3="Satui"
+            wilayah="Kalimantan Selatan"
           />
         </section>
       </div>
@@ -214,6 +281,8 @@ import RouteItem from "../components/RouteItem.astro";
         src="asset/galeri_poster.png"
         alt="Galeri Perjalanan Borneox Travel Samarinda Kalimantan"
         class="banner-image"
+        width="1440"
+        height="300"
       />
     </picture>
     <div class="container">
